@@ -44,8 +44,7 @@ void funnyFace()
 
 }//method ends
 
-void dayHouse(){
-  void drawHouseWithSun()
+void dayHouse()
 {
   // Draw the house
   fillRectangle(50, 150, 100, 100, COLOR_BLUE); // Body of the house
@@ -69,8 +68,8 @@ void dayHouse(){
     int endY = sunY + sunRadius * sin(angle); // Calculate the Y-coordinate of the end point of the ray
     drawLine(sunX, sunY, endX, endY, COLOR_YELLOW); // Draw the sun ray
   }
-}
-}
+
+}//method ends
 
 
 
