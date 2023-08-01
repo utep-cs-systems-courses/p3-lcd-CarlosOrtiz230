@@ -50,12 +50,12 @@ void funnyFace()
 void dayHouse()
 {
   // Draw the house
-  fillRectangle(50, 50, 100, 100, COLOR_BLUE); // Body of the house
-  fillRectangle(70, 70, 20, 30, COLOR_RED);    // Door
+  fillRectangle(40, 60, 100, 100, COLOR_BLUE); // Body of the house
+  fillRectangle(40, 60, 20, 30, COLOR_RED);    // Door
   fillRectangle(85, 50, 10, 30, COLOR_GREEN);  // Window 1
-  drawPixel(40, 90, COLOR_BLACK);            // Roof peak
-  drawPixel(70, 90, COLOR_BLACK);             // Roof left corner
-  drawPixel(130, 90, COLOR_BLACK);            // Roof right corner
+  drawPixel(40, 80, COLOR_BLACK);            // Roof peak
+  drawPixel(70, 80, COLOR_BLACK);             // Roof left corner
+  drawPixel(30, 80, COLOR_BLACK);            // Roof right corner
 
   // Draw the sun-like square
   int sunX = 200; // X-coordinate of the sun
