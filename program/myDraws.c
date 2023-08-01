@@ -5,6 +5,7 @@
 #include "led.h"
 #include <stdio.h>
 #include <stdlib.h>
+#define ASTRO_COLOR = COLOR_YELLOW
 
 void funnyFace()
 {
@@ -49,24 +50,30 @@ void funnyFace()
 
 void dayHouse()
 {
-  // Draw the house
-  fillRectangle(40, 60, 100, 100, COLOR_BLUE); // Body of the house
-  fillRectangle(40, 60, 20, 30, COLOR_RED);    // Door
-  fillRectangle(85, 50, 10, 30, COLOR_GREEN);  // Window 1
-  drawPixel(40, 80, COLOR_BLACK);            // Roof peak
-  drawPixel(70, 80, COLOR_BLACK);             // Roof left corner
-  drawPixel(30, 80, COLOR_BLACK);            // Roof right corner
+  int change = globalCounter();
+  int astroSize = 30; // Size of the sun (square)
+  //background
+  fillRectangle(0,0,150,180,COLOR_SKY_BLUE);
+  if(change%2==0){
+    ASTRO_COLOR = COLOR_WHITE
+    int astroSize = 10;
+    fillRectangle(0,0,150,180,COLOR_BLUE);
+  }
 
+    // Draw the house
+  fillRectangle(40, 90, 75, 75, COLOR_CHOCOLATE); // Body of the house
+  fillRectangle(60, 130, 20, 30, COLOR_RED);    // Door
+  fillRectangle(55, 100, 50, 20, COLOR_GREEN);  // Window 1
+  //roof
+  for(int i = 0;i<40;i++){
+    drawLine(77-i,50+i,77+i, 50+i, COLOR_BROWN);            // Roof peak
+  }
   // Draw the sun-like square
-  int sunX = 200; // X-coordinate of the sun
-  int sunY = 30;  // Y-coordinate of the sun
-  int sunSize = 40; // Size of the sun (square)
+  int sunX = 0; // X-coordinate of the sun
+  int sunY = 0;  // Y-coordinate of the sun
 
-  // Draw the sun-like square by connecting the center to each corner
-  drawLine(sunX, sunY, sunX + sunSize, sunY, COLOR_YELLOW); // Right side
-  drawLine(sunX, sunY, sunX - sunSize, sunY, COLOR_YELLOW); // Left side
-  drawLine(sunX, sunY, sunX, sunY + sunSize, COLOR_YELLOW); // Bottom side
-  drawLine(sunX, sunY, sunX, sunY - sunSize, COLOR_YELLOW); // Top side
+  fillRectangle(sunX,sunY,sunSize,astroSize, ASTRO_COLOR);
+  
 }
 
 

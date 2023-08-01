@@ -21,3 +21,9 @@ void main()
 
     or_sr(0x18);
 }
+
+int globalCounter(){
+  static int counter = 0;
+  counter++;
+  return counter;
+}
