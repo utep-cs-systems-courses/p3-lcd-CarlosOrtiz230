@@ -9,6 +9,7 @@ void main()
 {
     configureClocks();
     lcd_init();
+    buzzer_init();    
     clearScreen(COLOR_BLACK);
     init_shapes();
     draw_shapes();
