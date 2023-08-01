@@ -50,30 +50,38 @@ void funnyFace()
 
 void dayHouse()
 {
-  int change = globalCounter();
-  int astroSize = 30; // Size of the sun (square)
-  //background
-  fillRectangle(0,0,150,180,COLOR_SKY_BLUE);
-  if(change%2==0){
-    ASTRO_COLOR = COLOR_WHITE
-    int astroSize = 10;
-    fillRectangle(0,0,150,180,COLOR_BLUE);
-  }
+    int change = globalCounter();
+    int astroSize = 30; // Size of the sun (square)
+
+    // Draw the background
+    fillRectangle(0, 0, 150, 180, COLOR_SKY_BLUE);
+    if (change % 2 == 0)
+    {
+        ASTRO_COLOR = COLOR_WHITE;
+        astroSize = 10;
+        fillRectangle(0, 0, 150, 180, COLOR_BLUE);
+    }
 
     // Draw the house
-  fillRectangle(40, 90, 75, 75, COLOR_CHOCOLATE); // Body of the house
-  fillRectangle(60, 130, 20, 30, COLOR_RED);    // Door
-  fillRectangle(55, 100, 50, 20, COLOR_GREEN);  // Window 1
-  //roof
-  for(int i = 0;i<40;i++){
-    drawLine(77-i,50+i,77+i, 50+i, COLOR_BROWN);            // Roof peak
-  }
-  // Draw the sun-like square
-  int sunX = 0; // X-coordinate of the sun
-  int sunY = 0;  // Y-coordinate of the sun
+    fillRectangle(40, 90, 75, 75, COLOR_CHOCOLATE); // Body of the house
+    fillRectangle(60, 130, 20, 30, COLOR_RED);      // Door
+    fillRectangle(55, 100, 50, 20, COLOR_GREEN);    // Window 1
 
-  fillRectangle(sunX,sunY,sunSize,astroSize, ASTRO_COLOR);
-  
+    // Draw the roof (I'm assuming you want to draw a triangle-like roof)
+    int roofX1 = 40;
+    int roofX2 = 115;
+    int roofY = 90;
+    for (int i = 0; i < 38; i++)
+    {
+        drawLine(roofX1 + i, roofY, 77, 50 + i, COLOR_BROWN);
+        drawLine(roofX2 - i, roofY, 77, 50 + i, COLOR_BROWN);
+    }
+
+    // Draw the sun-like square
+    int sunX = 0; // X-coordinate of the sun
+    int sunY = 0; // Y-coordinate of the sun
+
+    fillRectangle(sunX, sunY, astroSize, astroSize, ASTRO_COLOR);
 }
 
 
