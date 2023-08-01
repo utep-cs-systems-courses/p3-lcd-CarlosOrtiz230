@@ -151,7 +151,7 @@ move_circle(void)
     left_score++;
 
   }
-  if((circle1.x - circle1.r) <= 0){/
+  if((circle1.x - circle1.r) <= 0){
     reset_circle();
     right_score++;
 
