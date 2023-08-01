@@ -10,6 +10,7 @@ void main()
     configureClocks();
     lcd_init();
     clearScreen(COLOR_WHITE);
+    buzzer_init();    
     
     while(1)
     {
