@@ -45,10 +45,7 @@ void funnyFace()
 
 }//method ends
 
-void dayHouse()
-{
-  // Draw the house
- {
+void dayHouse(){
   // Draw the house
   fillRectangle(50, 150, 100, 100, COLOR_BLUE); // Body of the house
   fillRectangle(70, 170, 20, 30, COLOR_RED);    // Door
@@ -90,8 +87,37 @@ void dayHouse()
     for (int step = 0; step <= numSteps; step++) {
       int x = startX + step * xStep;
       int y = startY + step * yStep;
-      drawixel(x, y, COLOR_YELLOW);
-   }
+      drawPixel(x, y, COLOR_YELLOW);
+    }
+  }
+  
+}
+
+
+void drawLine(int x0, int y0, int x1, int y1, int color)
+{
+  int dx = abs(x1 - x0);
+  int dy = abs(y1 - y0);
+  int sx = (x0 < x1) ? 1 : -1;
+  int sy = (y0 < y1) ? 1 : -1;
+  int err = dx - dy;
+
+  while (true)
+  {
+    drawPixel(x0, y0, color);
+    if (x0 == x1 && y0 == y1)
+      break;
+    int e2 = 2 * err;
+    if (e2 > -dy)
+    {
+      err -= dy;
+      x0 += sx;
+    }
+    if (e2 < dx)
+    {
+      err += dx;
+      y0 += sy;
+    }
   }
 }
 
