@@ -1,29 +1,24 @@
-all: libLcd.a lcddemo.elf
+# makfile configuration
 
-CPU             = msp430g2553
-CFLAGS          = -mmcu=${CPU} -Os -I../h 
-LDFLAGS 	= -L/opt/ti/msp430_gcc/include -L../lib 
+CPU             	= msp430g2553
+
+CFLAGS          	= -mmcu=${CPU} -Os -I../h
+
+LDFLAGS		= -L../lib -L/opt/ti/msp430_gcc/include/
+
 #switch the compiler (for the internal make rules)
+
 CC              = msp430-elf-gcc
-AS              = msp430-elf-as
-AR              = msp430-elf-ar
+AS              = msp430-elf-gcc -mmcu=${CPU} -c
 
-libLcd.a: font-11x16.o font-5x7.o font-8x12.o lcdutils.o lcddraw.o
-	$(AR) crs $@ $^
+all: screen.elf
 
-lcddraw.o: lcddraw.c lcddraw.h lcdutils.h
-lcdutils.o: lcdutils.c lcdutils.h
+#additional rules for files
 
-install: libLcd.a
-	mkdir -p ../h ../lib
-	mv $^ ../lib
-	cp *.h ../h
+screen.elf: ${COMMON_OBJECTS} runner.o wdt_handler.o stateMachine.o draws.o
 
-clean:
-	rm -f libLcd.a *.o *.elf
-
-lcddemo.elf: lcddemo.o libLcd.a 
-	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lTimer 
-
-load: lcddemo.elf
+	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^ -lTimer -lLcd
+load: screen.elf
 	msp430loader.sh $^
+clean:
+	rm -f *.o *.elf
