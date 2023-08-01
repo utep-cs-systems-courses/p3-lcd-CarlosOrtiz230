@@ -10,7 +10,7 @@ void state_advance(int state){
       melody();
       break;
     case 2:
-
+      dayHouse();
       break;
     case 3:
       

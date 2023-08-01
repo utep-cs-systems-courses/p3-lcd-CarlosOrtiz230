@@ -2,6 +2,7 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 #include "myDraws.h"
+#include "led.h"
 
 void funnyFace()
 {

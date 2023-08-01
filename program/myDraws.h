@@ -2,6 +2,7 @@
 #define _MY_DRAWS_H_
 #include <lcdutils.h>
 
-void funnyFace();
+void funnyFace(int counter);
+void dayHouse();
 
 #endif
