@@ -44,5 +44,33 @@ void funnyFace()
 
 }//method ends
 
+void dayHouse(){
+  void drawHouseWithSun()
+{
+  // Draw the house
+  fillRectangle(50, 150, 100, 100, COLOR_BLUE); // Body of the house
+  fillRectangle(70, 170, 20, 30, COLOR_RED);    // Door
+  fillRectangle(85, 120, 10, 30, COLOR_GREEN);  // Window 1
+  fillRectangle(105, 120, 10, 30, COLOR_GREEN); // Window 2
+  drawPixel(100, 150, COLOR_BLACK);            // Roof peak
+  drawPixel(70, 150, COLOR_BLACK);             // Roof left corner
+  drawPixel(130, 150, COLOR_BLACK);            // Roof right corner
+
+  // Draw the sun
+  int sunX = 200; // X-coordinate of the sun
+  int sunY = 30;  // Y-coordinate of the sun
+  int sunRadius = 20; // Radius of the sun
+  int numSunRays = 16; // Number of sun rays
+
+  // Draw the sun rays using a for loop
+  for (int i = 0; i < numSunRays; i++) {
+    double angle = 2 * M_PI * i / numSunRays; // Calculate the angle for each ray
+    int endX = sunX + sunRadius * cos(angle); // Calculate the X-coordinate of the end point of the ray
+    int endY = sunY + sunRadius * sin(angle); // Calculate the Y-coordinate of the end point of the ray
+    drawLine(sunX, sunY, endX, endY, COLOR_YELLOW); // Draw the sun ray
+  }
+}
+}
+
 
 
