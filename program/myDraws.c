@@ -45,7 +45,7 @@ void funnyFace()
 
 }//method ends
 
-void drawHouseWithSun()
+void dayHouse()
 {
   // Draw the house
  {
