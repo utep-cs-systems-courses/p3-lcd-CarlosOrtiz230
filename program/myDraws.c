@@ -48,6 +48,8 @@ void funnyFace()
 void drawHouseWithSun()
 {
   // Draw the house
+ {
+  // Draw the house
   fillRectangle(50, 150, 100, 100, COLOR_BLUE); // Body of the house
   fillRectangle(70, 170, 20, 30, COLOR_RED);    // Door
   fillRectangle(85, 120, 10, 30, COLOR_GREEN);  // Window 1
@@ -67,7 +69,29 @@ void drawHouseWithSun()
 
   // Draw the sun-like square by connecting the center to each corner
   for (int i = 0; i < 4; i++) {
-    drawLine(sunX, sunY, cornersX[i], cornersY[i], COLOR_YELLOW);
+    int startX = sunX;
+    int startY = sunY;
+    int endX = cornersX[i];
+    int endY = cornersY[i];
+    
+    // Determine the direction of the line (left or right)
+    int xStep = (endX > startX) ? 1 : -1;
+    // Determine the direction of the line (up or down)
+    int yStep = (endY > startY) ? 1 : -1;
+
+    // Calculate the absolute difference between end and start coordinates
+    int diffX = abs(endX - startX);
+    int diffY = abs(endY - startY);
+
+    // Use the larger difference as the number of steps in the for loop
+    int numSteps = (diffX > diffY) ? diffX : diffY;
+
+    // Draw the line using a for loop
+    for (int step = 0; step <= numSteps; step++) {
+      int x = startX + step * xStep;
+      int y = startY + step * yStep;
+      drawixel(x, y, COLOR_YELLOW);
+   }
   }
 }
 
