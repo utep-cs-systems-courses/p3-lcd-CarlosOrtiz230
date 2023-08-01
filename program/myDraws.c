@@ -45,7 +45,7 @@ void funnyFace()
 
 }//method ends
 
-void dayHouse()
+void drawHouseWithSun()
 {
   // Draw the house
   fillRectangle(50, 150, 100, 100, COLOR_BLUE); // Body of the house
@@ -56,21 +56,19 @@ void dayHouse()
   drawPixel(70, 150, COLOR_BLACK);             // Roof left corner
   drawPixel(130, 150, COLOR_BLACK);            // Roof right corner
 
-  // Draw the sun
+  // Draw the sun-like square
   int sunX = 200; // X-coordinate of the sun
   int sunY = 30;  // Y-coordinate of the sun
-  int sunRadius = 20; // Radius of the sun
-  int numSunRays = 16; // Number of sun rays
+  int sunSize = 40; // Size of the sun (square)
 
-  // Draw the sun rays using a for loop
-  for (int i = 0; i < numSunRays; i++) {
-    double angle = 2 * M_PI * i / numSunRays; // Calculate the angle for each ray
-    int endX = sunX + sunRadius * cos(angle); // Calculate the X-coordinate of the end point of the ray
-    int endY = sunY + sunRadius * sin(angle); // Calculate the Y-coordinate of the end point of the ray
-    drawLine(sunX, sunY, endX, endY, COLOR_YELLOW); // Draw the sun ray
+  // Calculate the coordinates of the corners of the square
+  int cornersX[4] = {sunX - sunSize, sunX + sunSize, sunX + sunSize, sunX - sunSize};
+  int cornersY[4] = {sunY - sunSize, sunY - sunSize, sunY + sunSize, sunY + sunSize};
+
+  // Draw the sun-like square by connecting the center to each corner
+  for (int i = 0; i < 4; i++) {
+    drawLine(sunX, sunY, cornersX[i], cornersY[i], COLOR_YELLOW);
   }
-
-}//method ends
-
+}
 
 
