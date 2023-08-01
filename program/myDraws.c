@@ -3,6 +3,8 @@
 #include "lcddraw.h"
 #include "myDraws.h"
 #include "led.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 void funnyFace()
 {
