@@ -45,7 +45,8 @@ void funnyFace()
 
 }//method ends
 
-void dayHouse(){
+void dayHouse()
+{
   // Draw the house
   fillRectangle(50, 150, 100, 100, COLOR_BLUE); // Body of the house
   fillRectangle(70, 170, 20, 30, COLOR_RED);    // Door
@@ -60,37 +61,11 @@ void dayHouse(){
   int sunY = 30;  // Y-coordinate of the sun
   int sunSize = 40; // Size of the sun (square)
 
-  // Calculate the coordinates of the corners of the square
-  int cornersX[4] = {sunX - sunSize, sunX + sunSize, sunX + sunSize, sunX - sunSize};
-  int cornersY[4] = {sunY - sunSize, sunY - sunSize, sunY + sunSize, sunY + sunSize};
-
   // Draw the sun-like square by connecting the center to each corner
-  for (int i = 0; i < 4; i++) {
-    int startX = sunX;
-    int startY = sunY;
-    int endX = cornersX[i];
-    int endY = cornersY[i];
-    
-    // Determine the direction of the line (left or right)
-    int xStep = (endX > startX) ? 1 : -1;
-    // Determine the direction of the line (up or down)
-    int yStep = (endY > startY) ? 1 : -1;
-
-    // Calculate the absolute difference between end and start coordinates
-    int diffX = abs(endX - startX);
-    int diffY = abs(endY - startY);
-
-    // Use the larger difference as the number of steps in the for loop
-    int numSteps = (diffX > diffY) ? diffX : diffY;
-
-    // Draw the line using a for loop
-    for (int step = 0; step <= numSteps; step++) {
-      int x = startX + step * xStep;
-      int y = startY + step * yStep;
-      drawPixel(x, y, COLOR_YELLOW);
-    }
-  }
-  
+  drawLine(sunX, sunY, sunX + sunSize, sunY, COLOR_YELLOW); // Right side
+  drawLine(sunX, sunY, sunX - sunSize, sunY, COLOR_YELLOW); // Left side
+  drawLine(sunX, sunY, sunX, sunY + sunSize, COLOR_YELLOW); // Bottom side
+  drawLine(sunX, sunY, sunX, sunY - sunSize, COLOR_YELLOW); // Top side
 }
 
 
@@ -102,7 +77,7 @@ void drawLine(int x0, int y0, int x1, int y1, int color)
   int sy = (y0 < y1) ? 1 : -1;
   int err = dx - dy;
 
-  while (true)
+  while (1)
   {
     drawPixel(x0, y0, color);
     if (x0 == x1 && y0 == y1)
