@@ -7,6 +7,7 @@ void state_advance(int state){
  switch (state) {
     case 1:
       funnyFace();
+      melody();
       break;
     case 2:
 
