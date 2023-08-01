@@ -5,7 +5,7 @@
 
 void melody(int counter) {
   //specific pitch number
-  int notes[] = {880, 784, 1047, 1175, 880, 659, 659, 1175};
+  int notes[] = {659, 880, 988, 880, 784, 659, 659, 1175}; // Example: C5, A5, B5, A5, G5, E5, E5, D6
   int numNotes = sizeof(notes) / sizeof(notes[0]);//array size
   // Play each note twice simultaneously
   int cycle;
