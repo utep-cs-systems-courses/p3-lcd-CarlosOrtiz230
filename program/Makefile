@@ -1,4 +1,4 @@
-COMMON_OBJECTS		= draw_shapes.o p2_interrupt_handler.o stateMachine.o switches.o 
+COMMON_OBJECTS		= p2_interrupt_handler.o stateMachine.o switches.o myDraws.o 
 CPU             	= msp430g2553
 CFLAGS          	= -mmcu=${CPU} -Os -I../h
 LDFLAGS		= -L../lib -L/opt/ti/msp430_gcc/include/ 
