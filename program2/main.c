@@ -18,7 +18,8 @@ void main()
     srand(seed); // Inicializar la semilla para la función rand()
     configureClocks();
     lcd_init();
-    clearScreen(COLOR_WHITE);
+    clearScreen(COLOR_BLACK);
+    startRectangle();
     buzzer_init();    
    
 
