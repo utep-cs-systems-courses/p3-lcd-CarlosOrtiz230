@@ -24,7 +24,7 @@ void startRectangle(){
 void drawRectangle()
 {
    // Draw rectangle1 at its current position
-    fillRectangle(rectangle1.col - (rectangle1.width), rectangle1.row - (rectangle1.height), rectangle1.width, rectangle1.height, COLOR_RED); 
+    fillRectangle(rectangle1.col - (rectangle1.width)/2, rectangle1.row - (rectangle1.height)/2, rectangle1.width, rectangle1.height, COLOR_RED); 
 }
 
 void move(Rectangle* rect, char* dir) 
@@ -32,24 +32,23 @@ void move(Rectangle* rect, char* dir)
   // Erase the old  rectangle
   fillRectangle(rect->old_col - (rect->width / 2), rect->old_row - (rect->height / 2), rect->width, rect->height, COLOR_WHITE);
 
-  // Update the rectangle's position based on the direction
+  // Mov function is called depending on the input
   if (dir == 1) {
-    rect->row -= 3; // Move up by 5 pixels
+    rect->row -= 3; // Move up 
   } else if (dir == 2) {
-    rect->row += 3; // Move down by 5 pixels
+    rect->row += 3; // Move down 
   }else if (dir == 3) {
-    rect->col -= 3; // Move left by 5 pixels
+    rect->col -= 3; // Move left  
   }else if (dir == 4) {
-    rect->col += 3; // Move right by 5 pixels
+    rect->col += 3; // Move right 
   }
 
-  // Make sure the rectangle doesn't go out of bounds
+  // Avoid out of bounds
   if (rect->row < rect->height / 2) {
     rect->row = rect->height / 2;
   } else if (rect->row > screenHeight - rect->height / 2) {
     rect->row = screenHeight - rect->height / 2;
-  }
-
+  } 
   // Redraw the updated rectangle
   fillRectangle(rect->col - (rect->width / 2), rect->row - (rect->height / 2), rect->width, rect->height, COLOR_RED);
 
