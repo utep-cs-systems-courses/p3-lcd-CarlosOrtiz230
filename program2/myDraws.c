@@ -23,7 +23,7 @@ void startRectangle(){
 
 void drawRectangle()
 {
-   fillRectangle(30,30,30,30, COLOR_RED);
+   fillRectangle(50,50,30,30, COLOR_RED);
 }
 
 void move(Rectangle* rect, char* dir) 
@@ -41,12 +41,12 @@ void move(Rectangle* rect, char* dir)
     rect->col += 10; 
   }
   
-  if (rect->row < rect->height / 2) {
-    rect->row = rect->height / 2;
-  } else if (rect->row > screenHeight - rect->height / 2) {
-    rect->row = screenHeight - rect->height / 2;
-  }
-  fillRectangle(rect->col - (rect->width / 2), rect->row - (rect->height / 2), rect->width, rect->height, COLOR_RED);
+  // if (rect->row < rect->height / 2) {
+  //   rect->row = rect->height / 2;
+  // } else if (rect->row > screenHeight - rect->height / 2) {
+  //   rect->row = screenHeight - rect->height / 2;
+  // }
+  // fillRectangle(rect->col - (rect->width / 2), rect->row - (rect->height / 2), rect->width, rect->height, COLOR_RED);
 
   rect->old_row = rect->row;
 }
