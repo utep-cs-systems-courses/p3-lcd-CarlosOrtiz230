@@ -23,7 +23,7 @@ void startRectangle(){
 
 void drawRectangle()
 {
-   fillRectangle(0,00,10,10, COLOR_RED);
+   fillRectangle(30,30,10,10, COLOR_RED);
 }
 
 void move(Rectangle* rect, char* dir) 
