@@ -129,7 +129,7 @@ void mainScreen(){
 
 
 void drawCow() {
-    clearScreen(COLOR_GREEN;
+    clearScreen(COLOR_GREEN);
   
     // Draw a simple representation of a cow using basic shape   
     // Body
