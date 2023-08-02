@@ -6,16 +6,16 @@
 void state_advance(int state){ 
  switch (state) {
     case 1:
-      moveUp();
+      move(&rectangle,"U");
       break;
     case 2:
-       moveDown()
+       move((&rectangle1,"D")
        break;
     case 3:
-      moveLeft();
+      move((&rectangle1,"L");
       break;
     case 4:
-      moveRight();
+      move((&rectangle1,"R");
        break;
       
     default:
