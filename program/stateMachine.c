@@ -14,11 +14,12 @@ void state_advance(int state){
        dayHouse();
        break;
     case 3:
-      elGobiernoGobierna(1);
+      drawCow();
       break;
     case 4:
       // clearScreen(COLOR_WHITE);
        mainScreen();
+       elGobiernoGobierna(1);
        break;
       
     default:
