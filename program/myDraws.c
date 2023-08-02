@@ -130,7 +130,7 @@ void mainScreen(){
 
 void drawCow() {
     clearScreen(COLOR_WHITE);
-     int i = globalCounter();
+     int i = 3*  globalCounter();
     // Draw a simple representation of a cow using basic shape   
     // Body
     fillRectangle(30+i, 50, 90, 30, COLOR_BROWN);
