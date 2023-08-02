@@ -14,6 +14,7 @@
 
 void main()
 {
+    srand(time(NULL)); // Avoid random to crash
     configureClocks();
     lcd_init();
     clearScreen(COLOR_WHITE);
