@@ -14,7 +14,8 @@
 
 void main()
 {
-    srand(time(NULL)); // Avoid random to crash
+     nsigned int seed = TA0R; // Usar el valor del timer TA0R como semilla
+    srand(seed); // Inicializar la semilla para la función rand()
     configureClocks();
     lcd_init();
     clearScreen(COLOR_WHITE);
