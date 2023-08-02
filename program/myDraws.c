@@ -136,10 +136,10 @@ void drawCow() {
     fillRectangle(30, 50, 90, 30, COLOR_BROWN);
     
     // Head
-    fillRectangle(70, 30, 20, 20, COLOR_WHITE);
-    fillRectangle(70, 30, 5, 5, COLOR_BLACK);  // Eyes
-    fillRectangle(85, 30, 5, 5, COLOR_BLACK);
-    fillRectangle(75, 35, 10, 5, COLOR_BLACK); // Mouth
+    fillRectangle(50, 30, 20, 20, COLOR_WHITE);
+    fillRectangle(50, 30, 5, 5, COLOR_BLACK);  // Eyes
+    fillRectangle(65, 30, 5, 5, COLOR_BLACK);
+    fillRectangle(55, 35, 10, 5, COLOR_BLACK); // Mouth
     
     // Legs
     fillRectangle(40, 80, 10, 20, COLOR_BLACK);
