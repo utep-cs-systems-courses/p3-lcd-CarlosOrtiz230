@@ -24,7 +24,7 @@ void startRectangle(){
 void drawRectangle()
 {
    // Draw rectangle1 at its current position
-    fillRectangle(rectangle1.col - (rectangle1.width / 2), rectangle1.row - (rectangle1.height / 2), rectangle1.width, rectangle1.height, COLOR_RED); 
+    fillRectangle(rectangle1.col - (rectangle1.width), rectangle1.row - (rectangle1.height), rectangle1.width, rectangle1.height, COLOR_RED); 
 }
 
 void move(Rectangle* rect, char* dir) 
