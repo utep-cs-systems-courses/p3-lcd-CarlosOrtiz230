@@ -129,6 +129,7 @@ void mainScreen(){
 
 
 void drawCow() {
+    clearScreen(COLOR_WHITE);
      int i = globalCounter();
     // Draw a simple representation of a cow using basic shape   
     // Body
