@@ -9,17 +9,15 @@ void state_advance(int state){
       move(&rectangle,"U");
       break;
     case 2:
-       move((&rectangle1,"D");
+       move(&rectangle1,"D");
        break;
     case 3:
-      move((&rectangle1,"L");
+      move(&rectangle1,"L");
       break;
     case 4:
-      move((&rectangle1,"R");
-       break;
-      
-    default:
-      
+      move(&rectangle1,"R");
+       break;  
+    default;
       break;
   }
 }
