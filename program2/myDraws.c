@@ -38,9 +38,9 @@ void move(Rectangle* rect, char* dir)
   } else if (dir == 2) {
     rect->row += 3; // Move down by 5 pixels
   }else if (dir == 3) {
-    rect->col -= 3; // Move down by 5 pixels
+    rect->col -= 3; // Move left by 5 pixels
   }else if (dir == 4) {
-    rect->col += 3; // Move down by 5 pixels
+    rect->col += 3; // Move right by 5 pixels
   }
 
   // Make sure the rectangle doesn't go out of bounds
@@ -54,5 +54,6 @@ void move(Rectangle* rect, char* dir)
   fillRectangle(rect->col - (rect->width / 2), rect->row - (rect->height / 2), rect->width, rect->height, COLOR_RED);
 
   // Update the old position to the new position for the next move
-  rect->old_row = rect->row;
+  rect->old_row = rect->row; 
+  rect->old_col = rect->col;
 }
