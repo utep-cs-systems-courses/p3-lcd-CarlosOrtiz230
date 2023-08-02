@@ -11,8 +11,5 @@
 #define TOPS4 BIT3
 #define TOPSW (TOPS1 | TOPS2 | TOPS3 | TOPS4)
 
-void stateMachine();
-void melody(int counter);
-
 
 #endif // included

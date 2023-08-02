@@ -5,6 +5,12 @@
 #include "myDraws.h"
 #include "switches.h"
 #include "led.h"
+#include "buzzer.h"
+#include <stddef.h>
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 
 void main()
 {
@@ -12,7 +18,8 @@ void main()
     lcd_init();
     clearScreen(COLOR_WHITE);
     buzzer_init();    
-    
+   
+
     while(1)
     {
         switch_init();

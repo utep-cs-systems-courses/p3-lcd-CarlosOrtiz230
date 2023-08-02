@@ -7,21 +7,23 @@ void state_advance(int state){
  switch (state) {
     case 1:
       funnyFace();
-      melody();
+      melody(2);
       clearScreen(COLOR_WHITE);
       break;
     case 2:
-      dayHouse();
+       dayHouse();
        break;
     case 3:
       clearScreen(COLOR_WHITE);
       elGobiernoGobierna(1);
       break;
     case 4:
-      mainScreen();
+       clearScreen(COLOR_WHITE);
+       mainScreen();
        break;
       
     default:
+      
       break;
   }
 }
