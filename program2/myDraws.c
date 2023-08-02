@@ -13,8 +13,8 @@
 Rectangle rectangle1;
 
 void startRectangle(){
-  rectangle1.row = 0;
-  rectangle1.col = 0;
+  rectangle1.row = 50;
+  rectangle1.col = 50;
   rectangle1.old_row = 0;
   rectangle1.old_col = 0;
   rectangle1.height =30;
@@ -23,7 +23,7 @@ void startRectangle(){
 
 void drawRectangle()
 {
-   fillRectangle(rectangle1.col - (rectangle1.width / 2), rectangle1.row - (rectangle1.height / 2), rectangle1.width, rectangle1.height, COLOR_GREEN);
+   fillRectangle(0,00,10,10, COLOR_GREEN);
 }
 
 void move(Rectangle* rect, char* dir) 
