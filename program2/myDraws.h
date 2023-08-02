@@ -11,5 +11,5 @@ typedef struct
 
 void move();
 void startRectangle();
-void 
+void drawRectangle();
 #endif
