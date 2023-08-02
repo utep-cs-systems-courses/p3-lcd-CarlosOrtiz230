@@ -13,10 +13,10 @@
 Rectangle rectangle1;
 
 void startRectangle(){
-    rectangle1.row = screenHeight/2;
-    rectangle1.col = screenWidth / 1.1;
-    rectangle1.old_row = screenHeight/2;
-    rectangle1.old_col = screenWidth / 1.1;
+    rectangle1.row = 30;
+    rectangle1.col = 30;
+    rectangle1.old_row = 50;
+    rectangle1.old_col = 50;
     rectangle1.height = 30;
     rectangle1.width = 30;
 }
@@ -31,7 +31,7 @@ void drawRectangle()
 void move(Rectangle* rect, char* dir) 
 {
   // Erase the old  rectangle
-  fillRectangle(rect->old_col - (rect->width / 2), rect->old_row - (rect->height / 2), rect->width, rect->height, COLOR_BLACK);
+  fillRectangle(rect->old_col - (rect->width / 2), rect->old_row - (rect->height / 2), rect->width, rect->height, COLOR_WHITE);
 
   // Update the rectangle's position based on the direction
   if (dir == 1) {
