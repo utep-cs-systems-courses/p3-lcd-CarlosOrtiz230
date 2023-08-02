@@ -9,5 +9,7 @@ typedef struct
     u_char width;
 } Rectangle;
 
-
+void move();
+void startRectangle();
+void 
 #endif
