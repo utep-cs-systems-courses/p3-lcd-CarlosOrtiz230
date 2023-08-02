@@ -6,20 +6,16 @@
 void state_advance(int state){ 
  switch (state) {
     case 1:
-      funnyFace();
-      melody(2);
-      clearScreen(COLOR_WHITE);
+      moveUp();
       break;
     case 2:
-       dayHouse();
+       moveDown()
        break;
     case 3:
-      drawCow();
+      moveLeft();
       break;
     case 4:
-      // clearScreen(COLOR_WHITE);
-       mainScreen();
-       elGobiernoGobierna(1);
+      moveRight();
        break;
       
     default:
