@@ -14,7 +14,7 @@
 
 void main()
 {
-     nsigned int seed = TA0R; // Usar el valor del timer TA0R como semilla
+     unsigned int seed = TA0R; // Usar el valor del timer TA0R como semilla
     srand(seed); // Inicializar la semilla para la función rand()
     configureClocks();
     lcd_init();
