@@ -15,15 +15,15 @@ Rectangle rectangle1;
 void startRectangle(){
   rectangle1.row = 50;
   rectangle1.col = 50;
-  rectangle1.old_row = 0;
-  rectangle1.old_col = 0;
+  rectangle1.old_row = 50;
+  rectangle1.old_col = 50;
   rectangle1.height =30;
   rectangle1.width = 30;
 }
 
 void drawRectangle()
 {
-   fillRectangle(30,30,10,10, COLOR_RED);
+   fillRectangle(30,30,30,30, COLOR_RED);
 }
 
 void move(Rectangle* rect, char* dir) 
