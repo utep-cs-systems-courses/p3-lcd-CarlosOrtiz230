@@ -36,8 +36,9 @@ void melody(int counter) {
   melody(counter++);
 }
 
-void elgobiernoGobierna(int counter){
-    void melody(int counter) {
+void elgobiernoGobierna(int counter)
+{
+   
   // Specific pitch numbers for the melody "Cypis - Gdzie jest biały węgorz"
   int notes[] = {
     659, 659, 880, 880, 988, 988, 880, 0, // G G A A H H A Pause
