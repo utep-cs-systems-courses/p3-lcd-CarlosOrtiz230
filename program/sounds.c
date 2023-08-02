@@ -55,7 +55,7 @@ void elGobiernoGobierna(int counter)
     880, 988, 988, 1047, 988, 880, 784, 880, 659, 659, 659, 0, // A H H C H A F A G G G Pause
     659, 0, // G Pause
   };
-  drawCow();
+  drawCow(); drawCow(); drawCow(); drawCow();
   int numNotes = sizeof(notes) / sizeof(notes[0]); // Array size
    // Play each note twice simultaneously
   int cycle;
