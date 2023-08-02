@@ -14,7 +14,7 @@ void state_advance(int state){
        dayHouse();
        break;
     case 3:
-      drawCow();
+      elGobiernoGobierna();
       break;
     case 4:
       // clearScreen(COLOR_WHITE);
