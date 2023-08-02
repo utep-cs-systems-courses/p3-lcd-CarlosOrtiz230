@@ -24,8 +24,7 @@ void startRectangle(){
 void drawRectangle()
 {
    // Draw rectangle1 at its current position
-    fillRectangle(rectangle1.col - (rectangle1.width / 2), rectangle1.row - (rectangle1.height / 2), rectangle1.width, rectangle1.height, COLOR_RED);
-
+    fillRectangle(rectangle1.col - (rectangle1.width / 2), rectangle1.row - (rectangle1.height / 2), rectangle1.width, rectangle1.height, COLOR_RED); 
 }
 
 void move(Rectangle* rect, char* dir) 
@@ -35,13 +34,13 @@ void move(Rectangle* rect, char* dir)
 
   // Update the rectangle's position based on the direction
   if (dir == 1) {
-    rect->row -= 10; // Move up by 5 pixels
+    rect->row -= 3; // Move up by 5 pixels
   } else if (dir == 2) {
-    rect->row += 10; // Move down by 5 pixels
+    rect->row += 3; // Move down by 5 pixels
   }else if (dir == 3) {
-    rect->col -= 10; // Move down by 5 pixels
+    rect->col -= 3; // Move down by 5 pixels
   }else if (dir == 4) {
-    rect->col += 10; // Move down by 5 pixels
+    rect->col += 3; // Move down by 5 pixels
   }
 
   // Make sure the rectangle doesn't go out of bounds
