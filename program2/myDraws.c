@@ -34,9 +34,9 @@ void move(Rectangle* rect, char* dir)
   fillRectangle(rect->old_col - (rect->width / 2), rect->old_row - (rect->height / 2), rect->width, rect->height, COLOR_BLACK);
 
   // Update the rectangle's position based on the direction
-  if (direction == "U") {
+  if (dir == "U") {
     rect->row -= 10; // Move up by 5 pixels
-  } else if (direction == "D") {
+  } else if (dir == "D") {
     rect->row += 10; // Move down by 5 pixels
   }
 
