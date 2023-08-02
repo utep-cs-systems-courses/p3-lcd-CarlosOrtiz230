@@ -10,6 +10,8 @@
 #include "buzzer.h"
 #include "stateMachine.h"
 
+Rectangle rectangle1;
+
 void startRectangle(){
   rectangle1.row = screenHeight/2;
   rectangle1.col = screenWidth / 1.1;
