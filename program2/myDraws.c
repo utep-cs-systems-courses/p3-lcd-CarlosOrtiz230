@@ -30,7 +30,7 @@ void drawRectangle()
 
 void move(Rectangle* rect, char* dir) 
 {
-  // Erase the old rectangle
+  // Erase the old  rectangle
   fillRectangle(rect->old_col - (rect->width / 2), rect->old_row - (rect->height / 2), rect->width, rect->height, COLOR_BLACK);
 
   // Update the rectangle's position based on the direction
