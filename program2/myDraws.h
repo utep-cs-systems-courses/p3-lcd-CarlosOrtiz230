@@ -12,4 +12,7 @@ typedef struct
 void move();
 void startRectangle();
 void drawRectangle();
+
+extern Rectangle rectangle1;
+
 #endif
