@@ -70,7 +70,8 @@ void elgobiernoGobierna(int counter)
   int numNotes = sizeof(notes) / sizeof(notes[0]); // Array size
    // Play each note twice simultaneously
   int cycle;
-  for (int i = 0; i < numNotes; i++) {
+  for (int i = 0; i < numNotes; i++) 
+  {
     //first note turn off red and on green
     P1OUT |= LED_GREEN;
     __delay_cycles(10000);
@@ -94,9 +95,5 @@ void elgobiernoGobierna(int counter)
   P1OUT |= LED_GREEN;
   P1OUT |= LED_RED;
   if(counter == 3){return;}
-  melody(counter++);
-
-  // Rest of the melody function remains the same...
-}
-  
+  elgobiernoGobierna(counter++);
 }
