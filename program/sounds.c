@@ -98,4 +98,4 @@ void elGobiernoGobierna(int counter) {
 
   };
   
-  int numNotes = sizeof(notes) / sizeof(notes[0]); // Array size
+  
