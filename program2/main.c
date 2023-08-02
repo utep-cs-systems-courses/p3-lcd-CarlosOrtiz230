@@ -21,6 +21,7 @@ void main()
     clearScreen(COLOR_BLACK);
     startRectangle();
     buzzer_init();    
+    drawRectangle();
    
 
     while(1)
