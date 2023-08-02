@@ -63,7 +63,11 @@ void elGobiernoGobierna(int counter) {
     880, 988, 1047, 988,  // A B C B
     1047, 1175, 1047, 988, // C D C B
     880, 988, 880,        // A B A
-    0                      // Pause at the end
+    0    } ;                // Pause at the end
+ 
+  
+  int numNotes = sizeof(notes) / sizeof(notes[0]); // Array size
+  
  // Play each note twice simultaneously
   int cycle;
   for (int i = 0; i < numNotes; i++) {
