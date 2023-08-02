@@ -23,13 +23,13 @@ void startRectangle(){
 
 void drawRectangle()
 {
-   fillRectangle(0,00,10,10, COLOR_GREEN);
+   fillRectangle(0,00,10,10, COLOR_RED);
 }
 
 void move(Rectangle* rect, char* dir) 
 {
   // Erase the old rectangle
-  fillRectangle(rect->old_col - (rect->width / 2), rect->old_row - (rect->height / 2), rect->width, rect->height, COLOR_BLACK);
+  fillRectangle(rect->old_col - (rect->width / 2), rect->old_row - (rect->height / 2), rect->width, rect->height, COLOR_WHITE);
 
   if (dir == "U") {
     rect->row -= 10;  
@@ -46,7 +46,7 @@ void move(Rectangle* rect, char* dir)
   } else if (rect->row > screenHeight - rect->height / 2) {
     rect->row = screenHeight - rect->height / 2;
   }
-  fillRectangle(rect->col - (rect->width / 2), rect->row - (rect->height / 2), rect->width, rect->height, COLOR_GREEN);
+  fillRectangle(rect->col - (rect->width / 2), rect->row - (rect->height / 2), rect->width, rect->height, COLOR_RED);
 
   rect->old_row = rect->row;
 }
