@@ -33,6 +33,7 @@ void melody(int counter) {
   P1OUT |= LED_GREEN;
   P1OUT |= LED_RED;
   if(counter == 3){return;}
+  switch_init();
   melody(counter++);
 }
 
