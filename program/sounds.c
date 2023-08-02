@@ -36,7 +36,7 @@ void melody(int counter) {
   melody(counter++);
 }
 
-void elgobiernoGobierna(int counter)
+void elGobiernoGobierna(int counter)
 {
    
   // Specific pitch numbers for the melody "Cypis - Gdzie jest biały węgorz"
@@ -53,18 +53,6 @@ void elgobiernoGobierna(int counter)
     880, 988, 988, 1047, 988, 880, 784, 880, 659, 659, 659, 0, // A H H C H A F A G G G Pause
     880, 988, 988, 1047, 988, 880, 784, 880, 659, 659, 659, 0, // A H H C H A F A G G G Pause
     659, 0, // G Pause
-    659, 659, 880, 880, 988, 988, 880, 0, // G G A A H H A Pause
-    784, 784, 659, 659, 880, 880, 784, 0, // F F G G A A F Pause
-    659, 659, 659, 0,                     // G G G Pause
-    659, 659, 880, 880, 988, 988, 880, 0, // G G A A H H A Pause
-    784, 784, 659, 659, 880, 880, 784, 0, // F F G G A A F Pause
-    659, 784, 880, 988, 988, 880, 784, 659, 659, 0, // G F A H H A F G G Pause
-    659, 659, 880, 880, 988, 988, 880, 0, // G G A A H H A Pause
-    784, 784, 659, 659, 880, 880, 784, 0, // F F G G A A F Pause
-    659, 784, 880, 988, 988, 880, 784, 659, 659, 0, // G F A H H A F G G Pause
-    880, 988, 988, 1047, 988, 880, 784, 880, 659, 659, 659, 0, // A H H C H A F A G G G Pause
-    880, 988, 988, 1047, 988, 880, 784, 880, 659, 659, 659, 0, // A H H C H A F A G G G Pause
-    659, 0  // G Pause
   };
   
   int numNotes = sizeof(notes) / sizeof(notes[0]); // Array size
@@ -85,7 +73,7 @@ void elgobiernoGobierna(int counter)
     __delay_cycles(100000);
     P1OUT &= ~LED_GREEN;
     buzzer_set_period(notes[i]); 
-    __delay_cycles(7000000);
+    __delay_cycles(700000);
   }
   //after notes , there both lights on , then off , and repeat cycle
   __delay_cycles(1000000);
@@ -95,5 +83,5 @@ void elgobiernoGobierna(int counter)
   P1OUT |= LED_GREEN;
   P1OUT |= LED_RED;
   if(counter == 3){return;}
-  elgobiernoGobierna(counter++);
+  elGobiernoGobierna(counter++);
 }
