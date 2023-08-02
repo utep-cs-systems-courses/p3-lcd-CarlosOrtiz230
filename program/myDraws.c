@@ -115,11 +115,11 @@ void drawLine(int x0, int y0, int x1, int y1, int color)
 void mainScreen(){
   drawString5x7(10,10,"TAKE A BREAK :D",COLOR_BLACK,COLOR_WHITE);
   drawString5x7(10,50,"UNTIL THE SCREEN IS TOTALLY RED :D",COLOR_DARK_GREEN,COLOR_WHITE);
-  __delay_cycles(50000000);
+  __delay_cycles(500000);
   while(1)
   {
-    int random1 = rand() % 100000000; // Generates a number in the range [0, 120]
-    int  random2 = rand() % 10000000; // Generates a number in the range [0, 120]
+    int random1 = rand() % 10000000000; // Generates a number in the range [0, 120]
+    int  random2 = rand() % 10000000000; // Generates a number in the range [0, 120]
     fillRectangle(random1,random2,5,5,COLOR_ORANGE);
   }
 }
