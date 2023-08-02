@@ -24,15 +24,19 @@ void drawRectangle()
    fillRectangle(rectangle1.col - (rectangle1.width / 2), rectangle1.row - (rectangle1.height / 2), rectangle1.width, rectangle1.height, COLOR_GREEN)
 }
 
-void move(Rectangle* rect, Direction direction) 
+void move(Rectangle* rect, char* dir) 
 {
   // Erase the old rectangle
   fillRectangle(rect->old_col - (rect->width / 2), rect->old_row - (rect->height / 2), rect->width, rect->height, COLOR_BLACK);
 
-  if (direction == UP) {
-    rect->row -= 10; // Move up by 5 pixels
-  } else if (direction == DOWN) {
-    rect->row += 10; // Move down by 5 pixels
+  if (dir == "U") {
+    rect->row -= 10;  
+  } else if (dir == "D") {
+    rect->row += 10;  
+  }else if (dir == "L") {
+    rect->col -= 10;  
+  }else if (dir == "R") {
+    rect->col += 10; 
   }
   
   if (rect->row < rect->height / 2) {
