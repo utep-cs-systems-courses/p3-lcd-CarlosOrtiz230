@@ -119,9 +119,9 @@ void mainScreen(){
   drawString5x7(10,80," IS TOTALLY RED :D",COLOR_DARK_GREEN,COLOR_WHITE);
   __delay_cycles(10000);
   int random1,random2;
-  while(1){
-     random1 = rand() ; // Generates a number in the range [0, 120]
-     random2 = rand(); // Generates a number in the range [0, 120]
-    fillRectangle(random2,random1,50,50,COLOR_RED);
+  while(1){ ;
+    random1 = rand()%120 ; // Generates a number in the range [0, 120]
+    random2 = rand()%120; // Generates a number in the range [0, 120]
+    fillRectangle(random1 ,random2,30,30,COLOR_RED);
   }
 }

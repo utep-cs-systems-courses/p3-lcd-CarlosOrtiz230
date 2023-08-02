@@ -18,7 +18,7 @@ void state_advance(int state){
       elGobiernoGobierna(1);
       break;
     case 4:
-       clearScreen(COLOR_WHITE);
+      // clearScreen(COLOR_WHITE);
        mainScreen();
        break;
       
