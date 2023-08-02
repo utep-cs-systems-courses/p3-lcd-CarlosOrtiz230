@@ -13,12 +13,12 @@
 Rectangle rectangle1;
 
 void startRectangle(){
-  rectangle1.row = screenHeight/2;
-  rectangle1.col = screenWidth / 1.1;
-  rectangle1.old_row = screenHeight/2;
-  rectangle1.old_col = screenWidth / 1.1;
-  rectangle1.height = 50;
-  rectangle1.width = 10;
+  rectangle1.row = 0;
+  rectangle1.col = 0;
+  rectangle1.old_row = 0;
+  rectangle1.old_col = 0;
+  rectangle1.height =30;
+  rectangle1.width = 30;
 }
 
 void drawRectangle()
