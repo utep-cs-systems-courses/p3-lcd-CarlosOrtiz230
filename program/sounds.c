@@ -37,8 +37,9 @@ void melody(int counter) {
 }
 
 void elGobiernoGobierna(int counter)
-{
-   
+{ 
+   drawCow();
+  
   // Specific pitch numbers for the melody "Cypis - Gdzie jest biały węgorz"
   int notes[] = {
     659, 659, 880, 880, 988, 988, 880, 0, // G G A A H H A Pause
@@ -54,7 +55,7 @@ void elGobiernoGobierna(int counter)
     880, 988, 988, 1047, 988, 880, 784, 880, 659, 659, 659, 0, // A H H C H A F A G G G Pause
     659, 0, // G Pause
   };
-  
+  drawCow();
   int numNotes = sizeof(notes) / sizeof(notes[0]); // Array size
    // Play each note twice simultaneously
   int cycle;
@@ -83,5 +84,6 @@ void elGobiernoGobierna(int counter)
   P1OUT |= LED_GREEN;
   P1OUT |= LED_RED;
   if(counter == 3){return;}
+  drawCow();
   elGobiernoGobierna(counter++);
 }
