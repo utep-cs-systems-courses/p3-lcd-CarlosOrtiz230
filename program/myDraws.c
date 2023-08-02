@@ -129,16 +129,19 @@ void mainScreen(){
 
 
 void drawCow() {
-    // Draw a simple representation of a cow using basic shapes
-    // ...
-
-    // Placeholder code: This is a simple and abstract representation of a cow.
-    // Feel free to modify and enhance it to create your own cow drawing.
-    fillRectangle(50, 50, 50, 30, COLOR_BROWN);  // Cow's body
-    fillRectangle(65, 30, 20, 20, COLOR_WHITE);  // Cow's head
-    fillRectangle(55, 30, 5, 10, COLOR_BLACK);   // Cow's eyes
-    fillRectangle(80, 35, 10, 5, COLOR_BLACK);   // Cow's mouth
-    fillRectangle(60, 80, 30, 20, COLOR_BLACK);  // Cow's legs
+    // Draw a simple representation of a cow using basic shape   
+    // Body
+    fillRectangle(30, 50, 50, 30, COLOR_BROWN);
+    
+    // Head
+    fillRectangle(70, 30, 20, 20, COLOR_WHITE);
+    fillRectangle(70, 30, 5, 5, COLOR_BLACK);  // Eyes
+    fillRectangle(85, 30, 5, 5, COLOR_BLACK);
+    fillRectangle(75, 35, 10, 5, COLOR_BLACK); // Mouth
+    
+    // Legs
     fillRectangle(40, 80, 10, 20, COLOR_BLACK);
-    fillRectangle(100, 80, 10, 20, COLOR_BLACK);
+    fillRectangle(60, 80, 10, 20, COLOR_BLACK);
+    fillRectangle(90, 80, 10, 20, COLOR_BLACK);
+    fillRectangle(110, 80, 10, 20, COLOR_BLACK);
 }
