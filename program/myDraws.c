@@ -120,8 +120,8 @@ void mainScreen(){
   __delay_cycles(10000);
   int random1,random2;
   while(1){ ;
-    random1 = rand()%120 ; // Generates a number in the range [0, 120]
-    random2 = rand()%120; // Generates a number in the range [0, 120]
-    fillRectangle(random1 ,random2,30,30,COLOR_RED);
+    random1 = rand()%100000000 ; // Generates a number in the range [0, 120]
+    random2 = rand()%100000000; // Generates a number in the range [0, 120]
+    fillRectangle(random1 ,random2,1,1,COLOR_RED);
   }
 }

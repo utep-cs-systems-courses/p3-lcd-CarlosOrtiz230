@@ -15,7 +15,7 @@ void melody(int counter) {
     __delay_cycles(10000);
     P1OUT &= ~LED_RED;
     buzzer_set_period(notes[i]);
-    __delay_cycles(1000000);
+    __delay_cycles(1000);
     //little wait
 
     //the opposite lights
