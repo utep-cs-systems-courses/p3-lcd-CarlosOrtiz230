@@ -17,7 +17,7 @@ void state_advance(int state){
     case 4:
       move(&rectangle1,"R");
        break;  
-    default;
+  default:
       break;
   }
 }
