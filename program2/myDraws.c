@@ -24,7 +24,7 @@ void drawRectangle()
    fillRectangle(rectangle1.col - (rectangle1.width / 2), rectangle1.row - (rectangle1.height / 2), rectangle1.width, rectangle1.height, COLOR_GREEN)
 }
 
-void move_rectangles(Rectangle* rect, Direction direction) 
+void move(Rectangle* rect, Direction direction) 
 {
   // Erase the old rectangle
   fillRectangle(rect->old_col - (rect->width / 2), rect->old_row - (rect->height / 2), rect->width, rect->height, COLOR_BLACK);
