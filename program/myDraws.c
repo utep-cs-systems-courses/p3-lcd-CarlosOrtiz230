@@ -5,8 +5,8 @@
 #include "led.h"
 #include <stdio.h>
 #include <stdlib.h>
-#define ASTRO_COLOR = COLOR_YELLOW
-
+#include <time.h>
+#include "buzzer.h"
 void funnyFace()
 {
   int posRow = 20;
@@ -48,40 +48,37 @@ void funnyFace()
 
 }//method ends
 
+
 void dayHouse()
 {
-    int change = globalCounter();
-    int astroSize = 30; // Size of the sun (square)
+  int change = globalCounter();
+  int astroSize = 30; // Size of the sun (square)
+   // Draw the background
+   fillRectangle(0, 0, 150, 180, COLOR_SKY_BLUE);
 
-    // Draw the background
-    fillRectangle(0, 0, 150, 180, COLOR_SKY_BLUE);
-    if (change % 2 == 0)
+
+   //draw astro
+   fillRectangle(10,10,astroSize,astroSize,COLOR_YELLOW); 
+
+  if (change % 2 == 0)
     {
-        ASTRO_COLOR = COLOR_WHITE;
-        astroSize = 10;
-        fillRectangle(0, 0, 150, 180, COLOR_BLUE);
+     astroSize =15;
+     fillRectangle(0, 0, 150, 180, COLOR_BLUE);
+     fillRectangle(10,10,astroSize,astroSize,COLOR_WHITE);
     }
-
-    // Draw the house
-    fillRectangle(40, 90, 75, 75, COLOR_CHOCOLATE); // Body of the house
-    fillRectangle(60, 130, 20, 30, COLOR_RED);      // Door
-    fillRectangle(55, 100, 50, 20, COLOR_GREEN);    // Window 1
-
-    // Draw the roof (I'm assuming you want to draw a triangle-like roof)
-    int roofX1 = 40;
-    int roofX2 = 115;
-    int roofY = 90;
-    for (int i = 0; i < 38; i++)
+  // Draw the house
+  fillRectangle(40, 90, 75, 75, COLOR_CHOCOLATE); // Body of the house
+  fillRectangle(60, 130, 20, 30, COLOR_RED);      // Door
+  fillRectangle(55, 100, 50, 20, COLOR_GREEN);    // Window 1
+  // Draw the roof (I'm assuming you want to draw a triangle-like roof)
+  int roofX1 = 40;
+  int roofX2 = 115;
+  int roofY = 90;
+  for (int i = 0; i < 38; i++)
     {
-        drawLine(roofX1 + i, roofY, 77, 50 + i, COLOR_BROWN);
-        drawLine(roofX2 - i, roofY, 77, 50 + i, COLOR_BROWN);
+      drawLine(roofX1 + i, roofY, 77, 50 + i, COLOR_BROWN);
+      drawLine(roofX2 - i, roofY, 77, 50 + i, COLOR_BROWN);
     }
-
-    // Draw the sun-like square
-    int sunX = 0; // X-coordinate of the sun
-    int sunY = 0; // Y-coordinate of the sun
-
-    fillRectangle(sunX, sunY, astroSize, astroSize, ASTRO_COLOR);
 }
 
 
@@ -113,3 +110,14 @@ void drawLine(int x0, int y0, int x1, int y1, int color)
 }
 
 
+void mainScreen(){
+  drawString5x7(10,10,"TAKE A BREAK :D",COLOR_BLACK,COLOR_WHITE);
+  drawString5x7(10,50,"UNTIL THE SCREEN IS TOTALLY RED :D",COLOR_DARK_GREEN,COLOR_WHITE);
+  __delay_cycles(50000000);
+  while(1)
+  {
+    int random1 = rand() % 10000000000; // Generates a number in the range [0, 120]
+    int  random2 = rand() % 1000000000; // Generates a number in the range [0, 120]
+    fillRectangle(random1,random2,5,5,COLOR_ORANGE);
+  }
+}

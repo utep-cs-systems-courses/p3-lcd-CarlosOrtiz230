@@ -6,5 +6,6 @@ void funnyFace();
 void dayHouse();
 void drawLine(int x0, int y0, int x1, int y1, int color);
 int globalCounter();
+void mainScreen();
 
 #endif

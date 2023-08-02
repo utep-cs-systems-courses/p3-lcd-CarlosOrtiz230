@@ -8,16 +8,18 @@ void state_advance(int state){
     case 1:
       funnyFace();
       melody();
+      clearScreen(COLOR_WHITE);
       break;
     case 2:
       dayHouse();
-      break;
+       break;
     case 3:
-      
+      clearScreen(COLOR_WHITE);
       break;
     case 4:
+      mainScreen();
+       break;
       
-      break;
     default:
       break;
   }
