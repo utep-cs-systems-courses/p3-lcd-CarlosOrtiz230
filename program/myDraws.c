@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include "buzzer.h"
+#include "stateMachine.h"
+
 void funnyFace()
 {
   int posRow = 20;
